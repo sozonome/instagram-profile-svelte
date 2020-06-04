@@ -31,7 +31,7 @@
 					</h3>
 				</div>
 				<div>
-					Following
+					following
 					<h3>
 						{account.following}
 					</h3>
