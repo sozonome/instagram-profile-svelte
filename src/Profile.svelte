@@ -7,7 +7,7 @@
 
 <div>
 	{#if fetching}
-		{#if !fetching}
+		{#if !show}
 			<p>Fetching...Please Wait</p>
 		{/if}
 		{#if show}
@@ -40,11 +40,11 @@
 			<h4>Recent Posts</h4>
 			<div class="media">
 				{#each account.posts as post, index}
-				<div class="mediaContainer">
-					<a href={`https://instagram.com/p/${post.node.shortcode}`} target="_blank" rel="noopener noreferrer">
-						<img src={post.node.thumbnail_src} alt={post.node.accessibility_caption}/>
-					</a>
-				</div>
+					<div class="mediaContainer">
+						<a href={`https://instagram.com/p/${post.node.shortcode}`} target="_blank" rel="noopener noreferrer">
+							<img src={post.node.thumbnail_src} alt={post.node.accessibility_caption}/>
+						</a>
+					</div>
 				{/each}
 			</div>
 		{/if}

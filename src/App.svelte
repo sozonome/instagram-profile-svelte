@@ -42,15 +42,15 @@
 				show=true;
 			}).catch((error)=>{
 				failed=true
-				fetching=false;
 			})
 	}
 </script>
 
 <header>
 	<h1>
-	<img src={'/favicon.png'} alt="">
-	Instagram profile</h1>
+		<img src={'/favicon.png'} alt="">
+		Instagram Profile
+	</h1>
 </header>
 
 <main>
@@ -72,28 +72,3 @@
 <footer>
 	2020 - <a href="https://sznm.dev" target="_blank" rel="noopener noreferrer">SZNM</a>
 </footer>
-
-<style type="text/scss">
-	main{
-		width: 100%;
-	}
-
-	header{
-		height: 40px;
-		width: 100%;
-	}
-	header h1{
-		padding-top:10px;
-	}
-
-	header img{
-		width:30px;
-		margin:0;
-	}
-
-	footer{
-		align-self: flex-end;
-		width: 100%;
-		padding: 12px 0;
-	}
-</style>
