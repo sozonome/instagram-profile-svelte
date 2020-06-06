@@ -54,7 +54,7 @@
 <main>
   <h1>{show ? 'Found!' : `Search ${username}!`}</h1>
   <input
-    on:input={(e) => (username = e.target.value)}
+    bind:value={username}
     type="text"
     placeholder="instagram username" />
   <button type="submit" on:click={() => fetchAccount()}>Show Me</button>
