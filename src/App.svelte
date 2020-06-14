@@ -1,9 +1,7 @@
 <script>
   import Profile from "./Profile.svelte";
-  // import InstagramLogo from './img/instagramlogo.png';
-  export let name;
 
-  let username;
+  let username="";
 
   let show = false;
   let fetching = false;
@@ -33,7 +31,6 @@
             posts: user.edge_owner_to_timeline_media.edges,
           };
         }
-        console.log(account, data);
       })
       .then(() => {
         show = true;
@@ -41,6 +38,12 @@
       .catch((error) => {
         failed = true;
       });
+  }
+
+  function handleKeyPress(event){
+    if(event.key==='Enter'){
+      fetchAccount()
+    }
   }
 </script>
 
@@ -56,7 +59,9 @@
   <input
     bind:value={username}
     type="text"
-    placeholder="instagram username" />
+    placeholder="instagram username"
+    on:keydown={handleKeyPress}
+  />
   <button type="submit" on:click={() => fetchAccount()}>Show Me</button>
 </main>
 
